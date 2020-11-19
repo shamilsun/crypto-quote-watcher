@@ -1,0 +1,39 @@
+
+buildscript {
+
+    ext.android_plugin_version = '3.3.0'  //'3.0.0-beta2' //'3.6.4' //3.3.0
+
+    repositories {
+        //jcenter()
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$android_plugin_version"
+    }
+}
+
+
+allprojects {
+    repositories {
+        //jcenter()
+        google()
+        mavenCentral()
+        mavenLocal()
+        maven {
+            // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+            url "$rootDir/../node_modules/react-native/android"
+        }
+        //maven { url 'https://maven.google.com' }
+        //maven { url "https://jitpack.io" }
+        maven { url "http://jcenter.bintray.com/"}
+    }
+}
+
+ext {
+    compileSdkVersion = 28
+    buildToolsVersion = "28.0.2"
+    minSdkVersion = 19
+    targetSdkVersion = 26
+    supportLibVersion = "28.0.0"
+}

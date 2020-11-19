@@ -1,0 +1,36 @@
+{
+  "name": "quotes",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "@babel/runtime": "^7.1.2",
+    "@types/react": "^16.3.14",
+    "@types/react-native": "^0.55.14",
+    "metro-react-native-babel-preset": "^0.49.0",
+    "react-native-gesture-handler": "^1.0.8",
+    "typescript": "^3.1.6",
+    "whatwg-fetch": "^3.0.0"
+  },
+  "scripts": {
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "release-build": "yarn react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/build/intermediates/res/merged/release/ && rm -rf android/app/src/main/res/drawable-* && rm -rf android/app/src/main/res/raw/* && cd android && ./gradlew assembleRelease && cd ..",
+    "debug-build": "yarn react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/ && cd android && ./gradlew assembleDebug && cd .."
+  },
+  "dependencies": {
+    "@types/prop-types": "^15.5.8",
+    "@types/react-navigation": "^3.0.4",
+    "axios": "^0.19.0-beta.1",
+    "global": "^4.3.2",
+    "native-base": "^2.13.8",
+    "react": "16.8.3",
+    "react-native": "0.59.9",
+    "react-native-easy-grid": "^0.2.0",
+    "react-native-vector-icons": "^6.2.0",
+    "react-navigation": "^2.18.2",
+    "uuid": "^3.3.2"
+  },
+  "license" : "No License",
+  "author": "sunshamil, sunshamil@yandex.ru"
+}
